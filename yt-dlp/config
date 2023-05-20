@@ -1,5 +1,10 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+YT_DLP_CONFIG_FILE="${HOME}/.config/yt-dlp/config"
+
 yt-dlp --embed-subs --embed-metadata --embed-thumbnail --embed-chapters \
 --sub-lang=en --sub-format=srt --merge-output-format=mkv \
 --sponsorblock-mode=remove \
 --no-mtime --no-abort-on-error --playlist-reverse \
--o "~/storage/downloads/%(extractor)s/%(uploader)s/%(title)s%(ext)s"
+-o "~/storage/downloads/%(extractor)s/%(uploader)s/%(title)s%(ext)s" \
+--config-location "$YT_DLP_CONFIG_FILE"
